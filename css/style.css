@@ -281,6 +281,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border: 1px solid;
 }
 header .nav-menu {
   list-style: none;
@@ -313,6 +314,7 @@ header .btn-contact {
   margin: auto;
   text-align: center;
   padding: 25px 25px;
+  border: 1px solid;
 }
 .section .container {
   display: flex;
@@ -330,8 +332,117 @@ header .btn-contact {
   justify-content: center;
   text-align: center;
   gap: 25px;
-  border: 5px;
+  border: 1px solid;
+  margin: 25px;
 }
 .card img {
   border-radius: 25px;
+}
+.card .title {
+  font-size: 26px;
+}
+
+.assessment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+}
+.assessment h3 {
+  padding: 25px;
+}
+.assessment img {
+  padding: 25px;
+}
+.assessment .text {
+  padding: 25px;
+  color: red;
+}
+
+.reason {
+  text-align: center;
+  border: 1px solid;
+}
+.reason h2 {
+  text-align: center;
+}
+
+.service {
+  border: 1px solid;
+}
+.service p {
+  text-align: center;
+}
+.service .img-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service h3 {
+  text-align: center;
+}
+
+.contents {
+  display: flex;
+  text-align: center;
+  border: 1px solid;
+}
+.contents img {
+  border-radius: 100%;
+}
+.contents h2 {
+  position: relative;
+  top: 0;
+  left: 50%;
+}
+
+h3 {
+  text-align: center;
+  padding: 25px;
+}
+
+.need01 {
+  display: flex;
+  text-align: justify;
+}
+
+.need02 {
+  display: flex;
+  text-align: justify;
+}
+.need02 h3 {
+  text-align: center;
+}
+
+.need03 {
+  display: flex;
+  text-align: justify;
+  border: 1px solid;
+}
+.need03 h3 {
+  text-align: center;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 5px 10px;
+}
+
+#table02 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+#table02 th,
+#table02 td {
+  align-items: center;
+  width: 20%;
+  min-width: 130px;
+  padding: 10px;
+  height: 60px;
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */
