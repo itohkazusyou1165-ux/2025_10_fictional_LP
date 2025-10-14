@@ -47,24 +47,41 @@
 }
 
 //悩み部分
-.section {
-  display: block;
-  margin: auto;
-  text-align: center;
-  padding: 25px 25px;
-  border: 1px solid;
-  .container {
+
+.pain-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  h3 {
+    padding-top: 45px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .text {
+    padding-bottom: 45px;
+    font-size: 28px;
+  }
+  .div {
     display: flex;
-    text-align: center;
-    justify-content: center;
     gap: 25px;
   }
-  .pain-solution {
-    color: red;
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #08e21a;
+  }
+  .circle-text {
+    text-align: center;
+    line-height: 100px;
   }
 }
 
 //当社の強み
+
 .card-section {
   display: flex;
   justify-content: space-around;
@@ -72,9 +89,6 @@
   width: 100%;
   height: auto;
   background-color: gray;
-  text-align: center;
-  .card-title {
-  }
 }
 
 .description {
@@ -111,7 +125,7 @@
     align-items: center;
     width: 1000px;
     height: auto;
-    background-color: rgb(209, 206, 206);
+    background-color: rgb(233, 223, 223);
     gap: 44px;
     padding-bottom: 44px;
     margin: 83px;
@@ -124,34 +138,61 @@
 
 //Buzzlyが選ばれる理由
 
-.reason {
-  text-align: center;
-  border: 1px solid;
-  h2 {
+.reason-title {
+  width: 100%;
+  height: auto;
+}
+
+.example2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 50%;
+    height: auto;
+  }
+
+  .example-text {
     text-align: center;
   }
 }
-//Buzzly月額定額サービス
-.service {
-  border: 1px solid;
-}
-.button02 {
-  display: block;
-  margin: auto;
-  margin-top: 25px;
-  margin-bottom: 16px;
-  background-color: #08e21a;
-  border-radius: 6px;
-  border: 1px solid;
-  cursor: pointer;
-  width: 30%;
-  color: black;
+
+.example3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 50%;
+    height: auto;
+  }
+  .example-text3 {
+    text-align: center;
+  }
 }
 
-.img-group {
+.example4 {
   display: flex;
-  text-align: right;
   justify-content: center;
+  align-items: center;
+  padding-bottom: 45px;
+  img {
+    width: 50%;
+    height: auto;
+  }
+
+  .example-text {
+    text-align: center;
+  }
+}
+
+//Buzzly月額定額サービス
+.plan-text {
+  display: flex;
+  img {
+    width: 150px;
+    height: 150px;
+  }
 }
 //運用流れ
 .contents {
@@ -159,7 +200,7 @@
   text-align: center;
   border: 1px solid;
   img {
-    border-radius: 100%;
+    border-radius: 50%;
   }
   h2 {
     position: relative;
@@ -255,10 +296,12 @@ td {
 #contact-form {
   border: 1.5px solid;
   border-radius: 25px;
+  width: 100%;
+  height: auto;
 }
 .container {
   background-color: rgb(249, 251, 251);
-  max-width: 600px;
+  max-width: 925px;
   margin: 0 auto;
   text-align: center;
   border-radius: 25px;
