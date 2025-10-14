@@ -2,45 +2,51 @@
 @use "base" as *;
 @use "pages" as *;
 
-//header部分
-header {
+//header ロゴからメニュー部分
+
+.header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid;
-
+  background-color: rgb(230, 230, 236);
+  max-width: 2000px;
+  width: 100%;
+  height: auto;
+  img {
+    width: 170px;
+    height: 150px;
+    object-fit: cover;
+  }
   .nav-menu {
-    list-style: none;
     display: flex;
-  }
-  .nav-menu li {
-    width: 140px;
+    gap: 20px;
     text-align: center;
-    background-color: rgb(237, 232, 232);
-    height: 50px;
-    line-height: 50px;
-    margin-right: 2px;
   }
+  ul {
+    list-style: none;
+  }
+
   .btn-download {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    background-color: aqua;
-    .button {
-      width: 25px;
-      height: 100px;
-      border-radius: 25px;
-    }
+    gap: 25px;
+    margin: 0 0 0 auto;
   }
-  .btn-contact {
-    background-color: aqua;
+  .btn {
+    width: 150px;
+    height: auto;
   }
 }
 
-.img {
+//画像部分
+
+.header-image img {
   text-align: center;
+  max-width: 2000px;
+  width: 100%;
+  object-fit: cover;
 }
 
+//悩み部分
 .section {
   display: block;
   margin: auto;
@@ -59,19 +65,33 @@ header {
 }
 
 //当社の強み
-.card {
+.card-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  max-width: 2000px;
+  width: 100%;
+  height: auto;
+  background-color: gray;
   text-align: center;
-  gap: 25px;
-  border: 1px solid;
-  margin: 25px;
-  img {
-    border-radius: 25px;
+  .card-title {
   }
-  .title {
-    font-size: 26px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 580px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 25px;
+  gap: 44px;
+  padding-bottom: 44px;
+  margin: 70px;
+
+  p {
+    width: 300px;
   }
 }
 
@@ -80,16 +100,25 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   border: 1px solid;
-  h3 {
-    padding: 25px;
-  }
-  img {
-    padding: 25px;
-  }
-  .text {
-    padding: 25px;
-    color: red;
+  width: 100%;
+  height: auto;
+  .assessment-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 1000px;
+    height: auto;
+    background-color: rgb(209, 206, 206);
+    gap: 44px;
+    padding-bottom: 44px;
+    margin: 83px;
+    font-size: 18px;
+    .text {
+      color: rgb(217, 18, 18);
+    }
   }
 }
 
@@ -258,7 +287,7 @@ input,
 button {
   margin-top: 25px;
   margin-bottom: 16px;
-  background-color: #2abca7;
+  background-color: #e2e8e7;
   border-radius: 6px;
   border: 1px solid;
   cursor: pointer;
