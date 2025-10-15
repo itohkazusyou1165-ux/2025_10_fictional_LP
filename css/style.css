@@ -329,6 +329,9 @@ html.body {
   align-items: center;
   justify-content: center;
   gap: 45px;
+  width: 100%;
+  max-width: 2000px;
+  position: relative;
 }
 .pain-group h3 {
   padding-top: 45px;
@@ -343,16 +346,47 @@ html.body {
 .pain-group .div {
   display: flex;
   gap: 25px;
+  justify-content: center;
+  align-items: center;
 }
 .pain-group .circle {
-  width: 100px;
-  height: 100px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  background-color: #08e21a;
+  background-color: #b8beb9;
 }
 .pain-group .circle-text {
   text-align: center;
-  line-height: 100px;
+  position: relative;
+}
+.pain-group .img-group0 img {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  bottom: 35%;
+  left: 10%;
+  z-index: 20;
+}
+.pain-group .img-group1 img {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  bottom: 35%;
+  left: 40%;
+  z-index: 20;
+}
+.pain-group .img-group2 img {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  bottom: 35%;
+  left: 72%;
+  z-index: 20;
 }
 
 .card-section {
@@ -369,7 +403,7 @@ html.body {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  width: 580px;
+  max-width: 580px;
   height: auto;
   background-color: #fff;
   border-radius: 25px;
@@ -405,6 +439,12 @@ html.body {
 }
 .assessment .assessment-description .text {
   color: rgb(217, 18, 18);
+}
+
+.reason {
+  background-color: rgb(230, 230, 236);
+  display: flex;
+  flex-direction: column;
 }
 
 .reason-title {
@@ -461,20 +501,24 @@ html.body {
   padding: 25px;
 }
 
+.plan-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan {
+  padding: 250px;
+}
+
+.ig {
+  display: flex;
+  justify-content: end;
+}
+
 .contact-button {
-  display: block;
-  margin: auto;
-  width: 210px;
-  box-sizing: border-box;
-  background-image: url(../images/メールの無料アイコンその8.png);
-  background-repeat: no-repeat;
-  background-position: 20px center;
-  background-size: 30px auto;
-  background-color: rgb(225, 211, 9); /* ← これで上書きされない */
-  padding: 10px 10px 10px 60px;
+  display: flex;
   text-align: center;
-  border-radius: 25px;
-  color: black;
+  justify-content: center;
 }
 
 .contents {
@@ -558,7 +602,6 @@ td {
   color: red;
 }
 .contact .text-eria .contact-button {
-  display: block;
   margin: auto;
   width: 210px;
   box-sizing: border-box;
