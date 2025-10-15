@@ -4,6 +4,10 @@
 
 //header ロゴからメニュー部分
 
+html.body {
+  margin: 0;
+  padding: 0;
+}
 .header {
   display: flex;
   justify-content: space-around;
@@ -88,7 +92,7 @@
   max-width: 2000px;
   width: 100%;
   height: auto;
-  background-color: gray;
+  background-color: rgb(230, 230, 236);
 }
 
 .description {
@@ -123,7 +127,7 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    width: 1000px;
+    max-width: 1200px;
     height: auto;
     background-color: rgb(233, 223, 223);
     gap: 44px;
@@ -141,20 +145,24 @@
 .reason-title {
   width: 100%;
   height: auto;
+  border: 1px solid;
 }
 
 .example2 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  padding: 25px;
 
   img {
     width: 50%;
     height: auto;
+    border-radius: 25px;
   }
 
   .example-text {
     text-align: center;
+    padding: 25px;
   }
 }
 
@@ -162,12 +170,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 25px;
+
   img {
     width: 50%;
     height: auto;
+    border-radius: 25px;
   }
   .example-text3 {
     text-align: center;
+    padding: 25px;
   }
 }
 
@@ -176,63 +188,72 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 45px;
+
   img {
     width: 50%;
     height: auto;
+    border-radius: 25px;
   }
 
   .example-text {
     text-align: center;
+    padding: 25px;
   }
 }
 
 //Buzzly月額定額サービス
-.plan-text {
-  display: flex;
-  img {
-    width: 150px;
-    height: 150px;
-  }
+
+.contact-button {
+  display: block;
+  margin: auto;
+  width: 210px;
+  box-sizing: border-box;
+  background-image: url(../images/メールの無料アイコンその8.png);
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 30px auto;
+  background-color: rgb(225, 211, 9); /* ← これで上書きされない */
+  padding: 10px 10px 10px 60px;
+  text-align: center;
+  border-radius: 25px;
+  color: black;
 }
+
 //運用流れ
 .contents {
   display: flex;
   text-align: center;
   border: 1px solid;
+  width: 2113;
+  height: auto;
+
   img {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-  }
-  h2 {
-    position: relative;
-    top: 0;
-    left: 50%;
+    object-fit: cover;
   }
 }
 
-//必要性
+//SNSの必要性
 
 h3 {
   text-align: center;
   padding: 25px;
 }
-.need01 {
+.box:nth-child(even) {
   display: flex;
-  text-align: justify;
+  flex-direction: row-reverse;
 }
-.need02 {
+
+.box:nth-child(odd) {
   display: flex;
-  text-align: justify;
-  h3 {
-    text-align: center;
-  }
 }
-.need03 {
-  display: flex;
-  text-align: justify;
-  border: 1px solid;
-  h3 {
-    text-align: center;
-  }
+
+.box img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
 }
 
 //料金
@@ -262,7 +283,14 @@ td {
 
 //お気軽にご相談ください
 .contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
   border: 5px solid;
+  text-align: center;
+  justify-content: center;
+
   .text-eria {
     display: grid;
     text-align: center;
