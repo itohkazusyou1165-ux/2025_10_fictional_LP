@@ -4,10 +4,14 @@
 
 //header ロゴからメニュー部分
 
-html.body {
-  margin: 0;
-  padding: 0;
+/* 全体のリセットと基本設定 */
+body {
+  font-family: sans-serif; /* フォントを指定 */
+  margin: 0; /* bodyのデフォルトマージンをリセット */
+  padding: 20px 0; /* 上下の余白 */
+  background-color: #f8f8f8; /* 背景色を設定（画像にある薄いグレー系） */
 }
+
 .header {
   display: flex;
   justify-content: space-around;
@@ -151,155 +155,538 @@ html.body {
   }
 }
 
+@media (max-width: 768px) {
+  .card-section {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}
+
 //お客さまの声ゾーン
+
+//swiper部分
+.swiper--wrapper {
+  /* wrapperのサイズを調整 */
+  width: 100%;
+  height: 300px;
+}
+
+.assessment-swiper {
+  width: 100%;
+  height: auto;
+  padding: 80px 0;
+}
+
 .assessment {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 1px solid;
-  width: 100%;
+  width: 90%;
+  max-width: 800px;
   height: auto;
-  .assessment-description {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    max-width: 1200px;
-    height: auto;
-    background-color: rgb(233, 223, 223);
-    gap: 44px;
-    padding-bottom: 44px;
-    margin: 83px;
-    font-size: 18px;
-    .text {
-      color: rgb(217, 18, 18);
-    }
-  }
+  box-shadow: 0 4 8 white;
+  background-color: white;
 }
 
-//Buzzlyが選ばれる理由
-
-.reason {
-  background-color: rgb(230, 230, 236);
+.assessment-description {
   display: flex;
   flex-direction: column;
-}
-.reason-title {
+  text-align: center;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  gap: 44px;
   width: 100%;
   height: auto;
-  border: 1px solid;
-}
-
-.example2 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 25px;
-
+  padding: 44px;
+  margin: 0;
+  font-size: 18px;
   img {
-    width: 50%;
-    height: auto;
-    border-radius: 25px;
-  }
-
-  .example-text {
-    text-align: center;
-    padding: 25px;
+    object-fit: contain;
   }
 }
 
-.example3 {
+.assessment-description h3 {
+  margin-top: 0;
+}
+
+.assessment-description img {
+  max-width: 100%;
+  height: auto;
+}
+
+.assessment-description .text {
+  font-weight: bold;
+  color: rgb(84, 55, 55);
+}
+
+.swiper-slide {
+  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+  width: auto !important;
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+
+// .swiper-slide:nth-child(3n + 1) {
+//   background-color: #ffffff;
+// }
+
+// .swiper-slide:nth-child(3n + 2) {
+//   background-color: #ffffff;
+// }
+
+// .swiper-slide:nth-child(3n + 3) {
+//   background-color: #ffffff;
+// }
+
+.swiper-wrapper {
+  align-items: center;
+  padding: 44px;
+}
+
+.swiper-button-prev {
+  color: #333;
+}
+
+.swiper-button-next {
+  color: #333;
+}
+//Buzzlyが選ばれる理由
+
+.container-select {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 40px 0 60px;
+  color: #333;
+}
+
+.reason-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.content-item {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px;
-
-  img {
-    width: 50%;
-    height: auto;
-    border-radius: 25px;
-  }
-  .example-text3 {
-    text-align: center;
-    padding: 25px;
-  }
+  padding: 0 50px;
 }
 
-.example4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 45px;
+.text-content {
+  max-width: 500px;
+}
 
-  img {
-    width: 50%;
-    height: auto;
-    border-radius: 25px;
+.text-content h2 {
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.text-content p {
+  line-height: 1.8;
+  color: #555;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+//携帯の場合
+@media (max-width: 768px) {
+  .reason-section {
+    flex-direction: column;
+    margin-bottom: 40px;
   }
 
-  .example-text {
-    text-align: center;
-    padding: 25px;
+  .reverse {
+    flex-direction: column;
+  }
+
+  .content-item {
+    width: 100%;
+  }
+
+  .text-item {
+    padding: 30px 20px;
+  }
+
+  .title {
+    padding: 20px 0;
   }
 }
 
 //Buzzly月額定額サービス
-.plan-text {
-  display: flex;
-  flex-direction: column;
-}
-.plan {
-  padding: 250px;
-}
-.ig {
-  display: flex;
-  justify-content: end;
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 80px 0;
+  background-color: #fcfcfc;
 }
 
-.contact-button {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+.container-description {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
-//運用流れ
-.contents {
+
+/* 1段目: テキストと画像の横並び部分 */
+.main-content {
   display: flex;
-  text-align: center;
-  border: 1px solid;
-  width: 2113;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+/* テキストブロック */
+.text-area {
+  width: 60%;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+.service-title {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.sub-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 2;
+  color: #666;
+}
+
+/* 画像ブロック */
+.image-area {
+  width: 40%;
+  max-width: 500px;
+}
+
+.image-area img {
+  width: 100%;
   height: auto;
+  display: block;
+}
 
-  img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
+/* 2段目: ボタンエリア（中央寄せ） */
+.button-area {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.request-button {
+  display: inline-block;
+  background-color: #fcf4cf;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.request-button:hover {
+  background-color: #f5e49b;
+}
+
+/* レスポンシブ対応（横幅が狭い場合） */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .text-area,
+  .image-area {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .image-area {
+    order: 1;
+  }
+  .text-area {
+    order: 2;
+  }
+}
+
+//運用の流れ
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 80px 0;
+  background-color: #fcfcfc;
+}
+
+.container--setting {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  color: #333;
+  padding-bottom: 20px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* フロー全体を横並びにするFlexコンテナ */
+.flow-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+/* 各ステップのアイテム */
+.flow-item {
+  width: 20%;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.item-circle {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.item-text {
+  padding: 0 5px;
+}
+
+.step-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.step-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.step-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* レスポンシブ対応 (画面が狭い場合) */
+@media (max-width: 900px) {
+  .flow-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .flow-item {
+    width: 45%;
+    margin-bottom: 40px;
+  }
+
+  .item-circle {
+    width: 150px;
+    height: 150px;
   }
 }
 
 //SNSの必要性
 
-h3 {
-  text-align: center;
-  padding: 25px;
+/* ページ全体のコンテナ（横幅1400pxに制限し中央寄せ） */
+.container-need {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
-.box:nth-child(even) {
+
+/* 見出しの設定 */
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  color: #333;
+  padding-bottom: 15px;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+/* 見出しの下に線を作成 (::after 疑似要素を使用) */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #90bceb;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 各段の箱（カード）のスタイル */
+.reason-card {
   display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+/* 箱の中のアイテム（画像とテキスト） */
+.card-item {
+  box-sizing: border-box;
+
+  padding: 30px;
+}
+
+/* 画像側の幅とスタイル */
+.image-item {
+  width: 45%;
+  padding: 0;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* テキスト側の幅とスタイル */
+.text-item {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* テキストの内容全体を囲むコンテナ */
+.text-content {
+  max-width: 80%;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.card-detail {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* 2段目（テキストが先に来る）の入れ替え */
+.reverse {
   flex-direction: row-reverse;
 }
 
-.box:nth-child(odd) {
-  display: flex;
-}
+/* レスポンシブ対応（横幅が狭い場合） */
+@media (max-width: 900px) {
+  .reason-card,
+  .reverse {
+    flex-direction: column;
+  }
 
-.box img {
-  width: 50%;
-  height: auto;
-  object-fit: contain;
+  .card-item {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .image-item {
+    order: -1;
+    padding: 0;
+  }
+
+  .text-item {
+    padding: 30px 20px;
+  }
+
+  .text-content {
+    max-width: none;
+  }
 }
 
 //料金
+
+.container-plan {
+  border: 1px solid;
+}
+.container-title {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 15px;
+  position: relative;
+  margin-bottom: 40px;
+}
 th,
 td {
   border: 1px solid #000;
@@ -311,7 +698,12 @@ td {
   justify-content: center;
   text-align: center;
   margin: 0;
-  border: 1px solid;
+
+  padding: 80px;
+  .color {
+    color: #f9f9f9;
+    background-color: #111212;
+  }
 }
 
 #table02 th,
@@ -324,91 +716,250 @@ td {
   margin: auto;
 }
 
-//お気軽にご相談ください
-.contact {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  border: 5px solid;
+#table02 td {
+  background-color: rgb(214, 210, 210);
+}
+
+//無料相談
+
+/* ページ全体のコンテナ（横幅1400pxに制限し中央寄せ） */
+.container-consultation {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* 見出しの設定 */
+.section-title-cta {
   text-align: center;
+  font-size: 20px;
+  font-weight: normal;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* 中央の白い箱（カード） */
+.contact-card {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 40px;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* テキストエリア */
+.card-content {
+  margin-bottom: 40px;
+}
+
+.main-message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.detail-message {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.limit-message {
+  font-size: 15px;
+  color: #cc0000;
+  font-weight: bold;
+  margin-bottom: 30px;
+
+  position: relative;
+  padding-right: 30px;
+  display: inline-block;
+}
+
+/* ボタンエリア */
+
+.consult-button {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
 
-  .text-eria {
-    display: grid;
-    text-align: center;
-    gap: 25px;
-    padding-bottom: 10px;
-    border-radius: 25px;
-    .strong-font {
-      color: red;
-    }
+  background-color: #ffeb9c;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
 
-    .contact-button {
-      margin: auto;
-      width: 210px;
-      box-sizing: border-box;
-      background-image: url(../images/メールの無料アイコンその8.png);
-      background-repeat: no-repeat;
-      background-position: 20px center;
-      background-size: 30px auto;
-      background-color: rgb(225, 211, 9); /* ← これで上書きされない */
-      padding: 15px 15px 15px 60px;
-      text-align: center;
-      border-radius: 25px;
-      border: 3px solid;
-      color: black;
-    }
+  /* カーソルポインターの指定 */
+  cursor: pointer;
+}
+
+.consult-button:hover {
+  background-color: #ffc800;
+}
+
+/* アイコンとテキストの間に余白 */
+.consult-button i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 40px 20px;
+  }
+
+  .consult-button {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 16px;
   }
 }
 
-//お問い合わせゾーン
-#contact-form {
-  border: 1.5px solid;
-  border-radius: 25px;
-  width: 100%;
-  height: auto;
+//問い合わせゾーン
+
+/* 全体のリセットと基本設定 */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 80px 0;
+  background-color: #f7f7f7;
 }
-.container {
-  background-color: rgb(249, 251, 251);
-  max-width: 925px;
+
+/* ページ全体のコンテナ（横幅1400pxに制限し中央寄せ） */
+.container-contact {
+  max-width: 1400px;
   margin: 0 auto;
-  text-align: center;
-  border-radius: 25px;
-  border: 2px solid;
+  padding: 0 40px;
 }
 
-.head {
-  border-radius: 6px 6px 0px 0px;
-  background-color: rgb(247, 244, 244);
-}
-h2 {
+/* 見出しの設定 */
+.section-title-form {
   text-align: center;
-  padding: 18px;
-}
-input {
-  margin-top: 30px;
-}
-input,
-.text-area {
-  font-size: 1em;
-  background-color: rgb(192, 192, 192);
-  border-radius: 6px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #333;
+  padding-bottom: 15px;
+  position: relative;
+  margin-bottom: 40px;
 }
 
-//送信するボタン
-button {
-  margin-top: 25px;
-  margin-bottom: 16px;
-  background-color: #e2e8e7;
-  border-radius: 6px;
-  border: 1px solid;
+/* 見出しの下に線を作成 */
+.section-title-form::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #ccc;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 中央の白い箱（フォームカード） */
+.form-card {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 40px;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: #d9534f;
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.checkbox-group {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.checkbox-group label {
+  font-size: 14px;
+  color: #666;
+  margin-left: 5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  transform: scale(1.2);
+  vertical-align: middle;
+}
+
+/* 送信ボタンエリア */
+.button-area-submit {
+  text-align: center;
+}
+
+.submit-button {
+  /* 緑色のボタン */
+  background-color: #87e0b5;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 40px;
   cursor: pointer;
-  width: 30%;
-  color: black;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-button:hover {
-  background-color: rgb(239, 241, 241);
+
+.submit-button:hover {
+  background-color: #6fc998;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .form-card {
+    padding: 40px 20px;
+  }
 }
 
 //footerゾーン

@@ -14,6 +14,13 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/script.js"></script>
+
+    <!--Swiper　CDNを使用 -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!--Googleフォント欄-->
   </head>
 
@@ -43,7 +50,7 @@
 
     <!---画像部分-->
     <div class="header-image">
-      <img src="images/header.png" alt="" />
+      <img src="images/headerimg.png" alt="" />
     </div>
 
     <!---悩み部分-->
@@ -88,10 +95,15 @@
 
       <div class="card-title"></div>
       <div class="description">
-        <img src="images/logo02.png" width="50px" height="auto" alt="" />
+        <img
+          src="images/section_logo02.png"
+          width="50px"
+          height="auto"
+          alt=""
+        />
         <p>01</p>
         <img
-          src="images/戦略設計.jpeg"
+          src="images/strategy.jpeg"
           width="400px"
           alt="auto"
           class="card-img"
@@ -103,10 +115,15 @@
         </p>
       </div>
       <div class="description">
-        <img src="images/logo02.png" width="50px" height="auto" alt="" />
+        <img
+          src="images/section_logo02.png"
+          width="50px"
+          height="auto"
+          alt=""
+        />
         <p>02</p>
         <img
-          src="images/当社の強み.jpeg"
+          src="images/strong.point.jpeg"
           width="400px"
           alt="auto"
           class="card-img"
@@ -118,10 +135,15 @@
         </p>
       </div>
       <div class="description">
-        <img src="images/logo02.png" width="50px" height="auto" alt="" />
+        <img
+          src="images/section_logo02.png"
+          width="50px"
+          height="auto"
+          alt=""
+        />
         <p>03</p>
         <img
-          src="images/全額返金.jpeg"
+          src="images/return.jpeg"
           width="400px"
           alt="auto"
           class="card-img"
@@ -135,225 +157,409 @@
     </section>
 
     <!---お客さまの声ゾーン-->
-    <section class="assessment">
-      <div class="assessment-description">
-        <h3>お客さまの声</h3>
-        <img src="images/お客さまの声.png" alt="お客さまの声" />
-        <p class="text">これでやっと集客の心配がなくなりました。</p>
-        <p>
-          売上げのグラフが 右肩上がりになった時、 正直感動しました。<br />
-          素人の私には とても手の届かない 緻密な戦略でした。<br />
-          本当に感謝しています。
-        </p>
-        <p>株式会社ネクスト・ビジョン様</p>
+
+    <!-- Slider main container -->
+    <div class="swiper assessment-swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <section class="assessment">
+            <div class="assessment-description">
+              <h3>お客様の声</h3>
+              <img src="images/voice.png" alt="" />
+              <p class="text">
+                【夢にまで見た売上右肩上がりを達成できました。】
+              </p>
+              <p>
+                御社に相談する前は、集客の努力はしているものの、施策が点でしか繋がらず、売上は停滞していました。しかし、御社の緻密な戦略により、Webサイトや広告運用など全てが繋がり、結果としてわずか半年で売上が前年比30%増を達成。グラフが右肩上がりになった時は感動しました。本当に感謝しています。」
+              </p>
+              <p>株式会社ネクスト・ビジョン様</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="swiper-slide">
+          <section class="assessment">
+            <div class="assessment-description">
+              <h3>お客様の声</h3>
+              <img src="images/married.png" alt="" />
+              <p class="text">
+                【成約率2倍！】理想の顧客に絞った問い合わせが急増」
+              </p>
+              <p>
+                御社にWebサイトとSNSマーケティングをお願いして、想像以上の成果に驚いています！問い合わせ数が以前の2倍になり、成約率も格段にアップしました。お客様からの反応も非常に良く、狙った層にきちんとアプローチできていると実感しています。<br />
+
+                おかげさまで、安定した集客基盤が築け、会社の利益に大きく貢献していただきました。
+                本当にありがとうございます！」
+              </p>
+              <p>合同会社アトリエ・ブランシュ 様</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="swiper-slide">
+          <section class="assessment">
+            <div class="assessment-description">
+              <h3>お客様の声</h3>
+              <img src="images/IT.png" alt="" />
+              <p class="text">【新規リード数150%増！BtoBの壁を突破】</p>
+              <p>
+                ITコンサルという専門的で硬い内容にもかかわらず、御社にはSNSで関心を集めるための的確な切り口を見つけていただきました。新規の資料ダウンロードが前月比150%増加し、これまでSNSからでは難しかった質の高いリード獲得に成功しました。自社リソースを割くことなく、確実に成果に繋がったことに大変感謝しています。」
+              </p>
+              <p>株式会社リーディング・ソリューションズ 様</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="swiper-slide">
+          <section class="assessment">
+            <div class="assessment-description">
+              <h3>お客様の声</h3>
+              <img
+                src="images/Gemini_Generated_Image_czee2kczee2kczee (1) (1).png"
+                alt=""
+              />
+              <p class="text">
+                【【来店者数40%増！課題に合わせた集客戦略で、閑散期を克服】
+              </p>
+              <p>
+                店舗ごとの細やかなWeb・SNS運用で、特に悩みの種だった平日夜の集客が大幅に改善しました。
+                集客の心配が減ったおかげで、スタッフは料理と接客の質向上に集中でき、売上アップとブランドイメージ向上という二重の利益を得られました！」
+              </p>
+              <p>株式会社イートアップ・パートナーズ 様</p>
+            </div>
+          </section>
+        </div>
       </div>
-    </section>
+
+      <!-- 必要に応じてページネーション -->
+      <div class="swiper-pagination"></div>
+      <!-- 必要に応じてナビボタン -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
 
     <!--Buzzlyが選ばれる理由-->
-    <section class="reason">
-      <div class="reason-title">
-        <h3>Buzzlyが選ばれる理由</h3>
-      </div>
-      <div class="example2">
-        <img src="images/01選ばれる理由.jpeg" alt="" />
-        <div class="example-text">
-          <h3>01 安心の低価格とプロもの専門家のサポート</h3>
-          <p>
-            月額6万円で、経験豊富な専門ディレクターによる運用をパッケージ化。<br />
-            自社で担当者を雇うよりも圧倒的にコスト効率が高く、本業に集中できる環境を提供します。
-          </p>
+    <section class="container-select">
+      <h1 class="title">Buzzyが選ばれる理由</h1>
+
+      <!--選ばれる理由1つ目-->
+      <div class="reason-section section-1">
+        <div class="content-item image-item">
+          <img src="images/Reason.jpeg" alt="サービスのイメージ" />
+        </div>
+        <div class="content-item text-item">
+          <div class="text-content">
+            <h2>01 安心の低価格とプロの専門家のサポート</h2>
+            <p>
+              月額6万円で、経験豊富な専門ディレクターによる運用をパッケージ化。<br />
+              自社で担当者を雇うよりも圧倒的にコスト効率が良く、集客に集中できる環境を提供します。
+            </p>
+          </div>
         </div>
       </div>
 
-      <!---2つ目-->
-      <div class="example3">
-        <div class="example-text3">
-          <h3>02 ブランド認知度と信頼性の向上</h3>
-          <p>
-            プロの運用による統一されたブランドイメージを発信し、多くのフォロワーにリーチします。<br />
-            これにより、貴社の企業価値と信頼性が向上します。
-          </p>
+      <!--選ばれる理由2つ目-->
+      <div class="reason-section section-2 reverse">
+        <div class="content-item image-item">
+          <img src="images/up.jpeg" alt="売上アップのイメージ" />
         </div>
-        <img src="images/1081売り上げ.jpeg" alt="" />
+        <div class="content-item text-item">
+          <div class="text-content">
+            <h2>02 新規顧客の獲得と売り上げ増加</h2>
+            <p>
+              SNS経由での「問い合わせ数」「来店予約」「ECサイトの売上」が増加します。<br />
+              適切な導線設計により、フォロワーを売上につなげる「集客の仕組み」へと変容します。
+            </p>
+          </div>
+        </div>
       </div>
 
-      <!---3つ目-->
-      <div class="example4">
-        <img src="images/お問い合わせ.jpeg" alt="" />
-
-        <div class="example-text">
-          <h3>03 新規顧客の獲得と売り上げ増加</h3>
-          <p>
-            SNS経由での「問い合わせ数」「来店予約」「ECサイトの売上」が増加します。<br />
-            適切な導線設計により、フォロワーを売上につながる「見込み客」へと変換します。
-          </p>
+      <!--選ばれる理由3つ目-->
+      <div class="reason-section section-3">
+        <div class="content-item image-item">
+          <img src="images/contact.jpeg" alt="ミーティングのイメージ" />
+        </div>
+        <div class="content-item text-item">
+          <div class="text-content">
+            <h2>03 ブランド認知度と信頼性の向上</h2>
+            <p>
+              プロの運用による統一されたブランドイメージを発信し、多くのフォロワーにリーチします。<br />
+              これにより、貴社の企業価値と信頼性が向上します。
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!--月額サービス説明-->
-    <section class="plan">
-      <div class="plan-text">
-        <h4>SNS運用の月額定額サービス</h4>
-        <p>
-          いつでも解約可能な月額定額サービス
-          株式会社Buzzlyが提供するのは、成果にコミットする月額定額サービスです。<br />
-          プロのディレクターによる独自の成功メソッドと、最新のAI分析・トレンド情報を融合させ、<br />
-          再現性の高い成長戦略を設計。
-          煩雑な運用業務から解放されながら、質の高い、集客に直結するアカウントを最短で構築します。<br />
-          ご契約後、最低契約期間以降はいつでも解約可能。<br />
-          費用対効果が合わないリスクを回避し、貴社のSNSを確実に成果を生み出す資産に変えます。
-        </p>
-        <div class="ig">
-          <img src="images/月額定額サービス.png" width="250px" alt="" />
+    <div class="container-description">
+      <div class="content-wrapper">
+        <div class="main-content">
+          <div class="text-area">
+            <p class="service-title">SNS運用の月額定額サービス</p>
+            <p class="sub-title">いつでも解約可能な月額定額サービス</p>
+            <p class="description">
+              株式会社Buzztlyが提供するのは、成果にコミットする月額定額サービスです。<br />
+              プロのディレクターによる独自の成功メソッドと、最新のAI分析・トレンド情報を融合させ、再現性の高い成長戦略を設計。<br />
+              煩雑な運用業務から解放されながら、質の高い、集客に直結するアカウントを最短で構築します。<br />
+              ご契約後、最低契約期間以降はいつでも解約可能です。<br />
+              費用対効果が合わないリスクを回避し、貴社のSNSを確実に成果を生み出す資産に変えます。
+            </p>
+          </div>
+
+          <div class="image-area">
+            <img src="images/service.png" alt="電話で話す人々のイラスト" />
+          </div>
+        </div>
+
+        <div class="button-area">
+          <a href="#" class="request-button">まずは資料請求</a>
         </div>
       </div>
-
-      <div class="contact-button">
-        <button>今すぐ相談する！</button>
-      </div>
-    </section>
-
-    <!--運用流れ-->
-    <div class="text-title">
-      <h3>運用スタートの流れ</h3>
     </div>
 
-    <section class="contents">
-      <div class="box_01">
-        <p>01</p>
-        <img
-          src="images/ヒアリング.jpg"
-          width="250px"
-          height="250px"
-          alt="はてな"
-        />
-        <h4>徹底ヒアリングと戦略設計</h4>
-        <p>ご要望や話題について、詳細にヒアリングを行います。</p>
-      </div>
-      <div class="box_02">
-        <p>02</p>
-        <img src="images/見積もり.jpg" alt="はてな" />
-        <h4>ご提案・お見積もり</h4>
-        <p>最適な運用プランと具体的 なお見積もりをご提案します。</p>
-      </div>
-      <div class="box_03">
-        <p>03</p>
-        <img src="images/契約.jpg" alt="はてな" />
-        <h4>ご契約</h4>
-        <p>
-          提案内容とお見積もり にご同意いただけましたら、
-          正式にご契約を締結します。
-        </p>
-      </div>
-      <div class="box_04">
-        <p>04</p>
-        <img src="images/じゅんび.jpg" alt="はてな" />
-        <h4>運用準備</h4>
-        <p>
-          徹運用に必要なアカウント設定 やクリエイティブ制作、
-          ターゲット設定などの準備を進めます。
-        </p>
-      </div>
-      <div class="box_05">
-        <p>05</p>
-        <img
-          src="images/運用開始.jpg"
-          width="250px"
-          height="200px"
-          alt="はてな"
-        />
-        <h4>運用開始</h4>
-        <p>
-          準備完了後、効果測定を 行いながら、本格的な
-          「Buzzly」の運用を開始します。
-        </p>
-      </div>
-    </section>
+    <!---運用流れ-->
 
-    <!---SNSの必要性-->
-    <div class="text-title">
-      <h3>なぜ今の時代SNS運用が必要なのか</h3>
+    <div class="container-setting">
+      <h2 class="section-title">SNS運用スタートの流れ</h2>
+
+      <!---運用流れ1つ目-->
+      <div class="flow-container">
+        <div class="flow-item">
+          <div class="item-circle">
+            <img src="images/hearring.jpg"ヒアリングのイメージ" />
+          </div>
+          <div class="item-text">
+            <p class="step-number">01.</p>
+            <p class="step-title">徹底ヒアリングと戦略設計</p>
+            <p class="step-description">
+              ご要望や課題について、詳細にヒアリングを行います。
+            </p>
+          </div>
+        </div>
+
+        <!---運用流れ2つ目-->
+        <div class="flow-item">
+          <div class="item-circle">
+            <img src="images/estimate.jpg"PC操作のイメージ" />
+          </div>
+          <div class="item-text">
+            <p class="step-number">02.</p>
+            <p class="step-title">ご提案・お見積もり</p>
+            <p class="step-description">
+              最適な運用プランと具体的なお見積もりをご提案します。
+            </p>
+          </div>
+        </div>
+
+        <!---運用流れ3つ目-->
+        <div class="flow-item">
+          <div class="item-circle">
+            <img src="images/contract.jpg" alt="握手のイメージ" />
+          </div>
+          <div class="item-text">
+            <p class="step-number">03.</p>
+            <p class="step-title">ご契約</p>
+            <p class="step-description">
+              提案内容とお見積もりをご理解いただけましたら、正式にご契約を締結します。
+            </p>
+          </div>
+        </div>
+
+        <!---運用流れ4つ目-->
+        <div class="flow-item">
+          <div class="item-circle">
+            <img src="images/setting.jpg" alt="歯車と手のイメージ" />
+          </div>
+          <div class="item-text">
+            <p class="step-number">04.</p>
+            <p class="step-title">運用準備</p>
+            <p class="step-description">
+              運用に必要なアカウント設定やクリエイティブ制作、ターゲット設定などを進めます。
+            </p>
+          </div>
+        </div>
+
+        <!---運用流れ5つ目-->
+        <div class="flow-item">
+          <div class="item-circle">
+            <img src="images/start.jpg" alt="スマホ操作のイメージ" />
+          </div>
+          <div class="item-text">
+            <p class="step-number">05.</p>
+            <p class="step-title">運用開始</p>
+            <p class="step-description">
+              準備完了後、効果測定を行いながら、本格的な「Buzztly」の運用を開始します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---なぜSNSの必要性なのか-->
+    <div class="container-need">
+      <h2 class="section-title">なぜ今の時代SNS運用が必要なのか？</h2>
+
+      <!---SNSの必要性1つ目-->
+      <section class="reason-card">
+        <div class="card-item image-item">
+          <img src="images/meeting.jpeg" alt="ミーティングの様子" />
+        </div>
+        <div class="card-item text-item">
+          <div class="text-content">
+            <h3 class="card-title">
+              売上直結！潜在顧客の「ファン化」で安定成長
+            </h3>
+            <p class="card-detail">
+              月20時間の稼働とディレクターとのオンラインミーティングあり。<br />
+              追加で2つ運用の場合はご追加で+2万円<br />
+              (Tiktok・X・Instagramいずれか一つの運用に限る)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!---SNSの必要性2つ目-->
+      <section class="reason-card reverse">
+        <div class="card-item image-item">
+          <img src="images/expansion.jpeg" alt="スマホ操作の様子" />
+        </div>
+        <div class="card-item text-item">
+          <div class="text-content">
+            <h3 class="card-title">圧倒的な拡散力で認知度・集客を一気に拡大</h3>
+            <p class="card-detail">
+              無料で始められる媒体でありながら、コンテンツが「バズる」ことで、<br />
+              広告費をかけずに数十万・数千万人へリーチできます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!---SNSの必要性3つ目-->
+      <section class="reason-card">
+        <div class="card-item image-item">
+          <img src="images/trust.jpeg" alt="握手の様子" />
+        </div>
+        <div class="card-item text-item">
+          <div class="text-content">
+            <h3 class="card-title">企業の信頼性を高め、機会損失リスクを回避</h3>
+            <p class="card-detail">
+              無料で始められる媒体でありながら、コンテンツが「バズる」ことで、<br />
+              広告費をかけずに数十万人へリーチできます。
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!---料金表-->
-    <h3>料金表</h3>
-    <table id="table02">
-      <tr>
-        <th></th>
-        <th><small>おすすめ！</small><br />ライトプラン</th>
-        <th>スタンダードプラン</th>
-      </tr>
-      <tr>
-        <th>最低契約期間3ヶ月</th>
-        <td>◎</td>
-        <td>◎</td>
-      </tr>
-      <tr>
-        <th>アカウント数</th>
-        <td>1アカウントのみ</td>
-        <td>2アカウントまで</td>
-      </tr>
-      <tr>
-        <th>投稿頻度</th>
-        <td>月12回</td>
-        <td>月20回</td>
-      </tr>
-      <tr>
-        <th>ミーティング頻度</th>
-        <td>月1回</td>
-        <td>週1回</td>
-      </tr>
-      <tr>
-        <th>分析ツール導入</th>
-        <td>◎</td>
-        <td>◎</td>
-      </tr>
-      <tr>
-        <th>月次レポート</th>
-        <td>◎</td>
-        <td>◎</td>
-      </tr>
-      <tr>
-        <th>プラン料金</th>
-        <td>月60,000〜</td>
-        <td>月80,000〜</td>
-      </tr>
-    </table>
+    <div class="container-plan">
+      <h3 class="container-title">料金表</h3>
+      <table id="table02">
+        <tr>
+          <th></th>
+          <th class="color"><small>おすすめ！</small><br />ライトプラン</th>
+          <th class="color">スタンダードプラン</th>
+        </tr>
+        <tr>
+          <th>最低契約期間3ヶ月</th>
+          <td>◎</td>
+          <td>◎</td>
+        </tr>
+        <tr>
+          <th>アカウント数</th>
+          <td>1アカウントのみ</td>
+          <td>2アカウントまで</td>
+        </tr>
+        <tr>
+          <th>投稿頻度</th>
+          <td>月12回</td>
+          <td>月20回</td>
+        </tr>
+        <tr>
+          <th>ミーティング頻度</th>
+          <td>月1回</td>
+          <td>週1回</td>
+        </tr>
+        <tr>
+          <th>分析ツール導入</th>
+          <td>◎</td>
+          <td>◎</td>
+        </tr>
+        <tr>
+          <th>月次レポート</th>
+          <td>◎</td>
+          <td>◎</td>
+        </tr>
+        <tr>
+          <th>プラン料金</th>
+          <td>月60,000〜</td>
+          <td>月80,000〜</td>
+        </tr>
+      </table>
+    </div>
 
     <!--相談ゾーン-->
-    <section class="contact">
-      <h3>お気軽にご相談ください</h3>
-      <div class="text-box">
-        <p>話を聞くだけでもOK!</p>
-        <p>
-          snsで年間1億売り上げた<br />
-          専門家が運用いたします。<br />
-          sns運用代行ならBuzzlyにお任せください。
-        </p>
-        <p class="strong-font">
-          無料相談は先着20名様まで
-          <button class="contact-button">今すぐ相談する！</button>
-        </p>
+    <div class="container-consultation">
+      <h2 class="section-title-cta">お気軽にご相談ください！</h2>
+
+      <div class="contact-card">
+        <div class="card-content">
+          <p class="main-message">話を聞くだけでもOK!</p>
+          <p class="detail-message">
+            snsで年間1億円売り上げた<br />
+            専門家が運用いたします。<br />
+            sns運用代行ならBuzztlyにお任せください。
+          </p>
+          <p class="limit-message">無料相談は先着20名様まで</p>
+        </div>
+
+        <div class="button-area-cta">
+          <a href="#" class="consult-button">
+            <i class="fas fa-envelope"></i> 今すぐ無料相談する！
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
 
     <!--問い合わせゾーン-->
-    <form id="contact-form">
-      <div class="head">
-        <h2>お問い合わせ</h2>
+    <div class="container-contact">
+      <h2 class="section-title-form">お問い合わせ</h2>
+
+      <div class="form-card">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">名前: <span class="required">必須</span></label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email"
+              >メールアドレス: <span class="required">必須</span></label
+            >
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="tel"
+              >電話番号: <span class="required">必須</span></label
+            >
+            <input type="tel" id="tel" name="tel" required />
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="privacy" name="privacy" required />
+            <label for="privacy">個人情報の取り扱いに同意する</label>
+          </div>
+
+          <div class="button-area-submit">
+            <button type="submit" class="submit-button">送信する</button>
+          </div>
+        </form>
       </div>
-
-      <div class="container">
-        <input type="text" name="name" placeholder="名前" /><br />
-
-        <input type="email" name="emali" placeholder="メールアドレス" /><br />
-
-        <input type="phone-number" name="phone" placeholder="電話番号" /><br />
-
-        <button id="submit" type="submit">送信する！</button>
-      </div>
-    </form>
+    </div>
 
     <!---footerゾーン---->
     <footer id="footer">
