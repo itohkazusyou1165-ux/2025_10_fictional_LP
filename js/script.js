@@ -3,30 +3,42 @@
 // HTMLのbodyの閉じタグ手前などに記述します
 const swiper = new Swiper(".assessment-swiper", {
   // オプション
-  loop: true, // ループを有効にする
-
-  // カードの幅に合わせた設定
+  loop: true, // ループ設定
   slidesPerView: "auto", // スライドの枚数を自動調整（CSSの幅に従う）
-  centeredSlides: true, // アクティブなスライドを中央に配置
-  spaceBetween: 30, // スライド間のスペース（px）
+  speed: 2000, //一回あたりの動くスピード
+  centeredSlides: true, // スライドを中央に配置
+  spaceBetween: 30, // カードのスペース（
+  initialSlide: 1,
 
-  // 必要に応じてページネーション
+  autoplay: {
+    delay: 1000, //1000ms経過で動かす
+  },
+
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 
-  // 必要に応じてナビボタン
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 
-  // レスポンシブ設定（任意）
+  // レスポンシブ設定
   breakpoints: {
     // 768px以上
     768: {
       spaceBetween: 50,
     },
   },
+});
+
+//ハンバーガーメニュー
+
+const ham = document.querySelector("#js-hamburger");
+const nav = document.querySelector("#js-nav");
+
+ham.addEventListener("click", function () {
+  ham.classList.toggle("active");
+  nav.classList.toggle("active");
 });

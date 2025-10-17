@@ -12,6 +12,7 @@
       href="images/header_logo.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/script.js"></script>
 
@@ -26,135 +27,165 @@
 
   <body>
     <!---header部分-->
-    <header class="header">
+
+    <div class="container">
+      <header class="header">
+        <div class="header__inner">
+          <h1 class="header__title header-title">
+            <a href="#"> <img src="images/header_logo.png" alt="" /> </a>
+          </h1>
+
+          <nav class="header__nav nav" id="js-nav">
+            <ul class="nav__items nav-items">
+              <li class="nav-items__item"><a href="">メニュー</a></li>
+              <li class="nav-items__item"><a href="">メニュー</a></li>
+              <li class="nav-items__item"><a href="">メニュー</a></li>
+              <li class="nav-items__item"><a href="">メニュー</a></li>
+            </ul>
+          </nav>
+
+          <button class="header__hamburger hamburger" id="js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+      <main>
+        <div class="header-image">
+          <img src="images/headerimg.png" alt="" />
+        </div>
+      </main>
+      <footer class="footer">
+        <div>フッターエリア</div>
+      </footer>
+    </div>
+    <!-- <header class="header-top">
       <h1>
         <img src="images/header_logo.png" alt="会社ロゴ" />
-      </h1>
+      </h1> -->
 
-      <!---メニュー部分-->
-      <nav>
+    <!---メニュー部分-->
+    <!-- <nav>
         <ul class="nav-menu">
           <li><a href="#"></a>実績</li>
           <li><a href="#"></a>特徴</li>
           <li><a href="#"></a>料金</li>
           <li><a href="#"></a>よくある質問</li>
         </ul>
-      </nav>
-      <!---ボタン部分-->
+      </nav> -->
+    <!---ボタン部分-->
 
-      <div class="btn-download">
+    <!-- <div class="btn-download">
         <button class="btn">資料ダウンロード</button>
         <button class="btn">まずは無料相談</button>
-      </div>
-    </header>
+      </div> -->
 
     <!---画像部分-->
-    <div class="header-image">
+    <!-- <div class="header-image">
       <img src="images/headerimg.png" alt="" />
-    </div>
+    </div> -->
 
     <!---悩み部分-->
-    <section class="pain-group">
-      <h3>こんなお悩みありませんか？</h3>
 
-      <!---円みっつ作成-->
-      <div class="div">
-        <div class="circle">
-          <p class="circle-text">フォロワーが増えない</p>
+    <div class="container-pain">
+      <h2 class="section-title-problem">こんなお悩みありませんか？</h2>
+
+      <div class="problem-container">
+        <div class="problem-item">
+          <div class="circle-icon">
+            <img src="images/pain.png" alt="フォロワーが増えない" />
+            <p class="bubble-text">フォロワーが増えない</p>
+          </div>
         </div>
-        <div class="circle">
-          <p class="circle-text">社内にノウハウがない</p>
+
+        <div class="problem-item">
+          <div class="circle-icon">
+            <img
+              src="images/pain01.png"
+              width="100px"
+              alt="社内にノウハウがない"
+            />
+            <p class="bubble-text">社内にノウハウがない</p>
+          </div>
         </div>
-        <div class="circle">
-          <p class="circle-text">売り上げを上げたい</p>
+
+        <div class="problem-item">
+          <div class="circle-icon">
+            <img src="images/down.png" alt="売り上げを上げたい" />
+            <p class="bubble-text">売り上げを上げたい</p>
+          </div>
         </div>
       </div>
-      <!---画像グループ-->
-      <div class="img-group0">
-        <img src="" alt="" class="img-group0" />
+
+      <div class="cta-message">
+        <p>SNSの運用を安価で<br />丸ごと任せられたら...</p>
       </div>
 
-      <div class="img-group1">
-        <img src="" alt="" />
+      <div class="cta-bottom">
+        <span class="cta-text-left">そのお悩み</span>
+        <span class="cta-logo">
+          <img src="images/header_logo.png" alt="Buzztlyロゴ" />
+        </span>
+        <span class="cta-text-right"
+          >に<span class="red-text">お任せください。</span></span
+        >
       </div>
+    </div>
 
-      <div class="img-group2">
-        <img src="" alt="" />
+    <!----当社の強み-->
+
+    <div class="container-card">
+      <h2 class="section-title-strength">当社の強み</h2>
+
+      <div class="strength-cards-container">
+        <div class="strength-card">
+          <div class="card-header">
+            <span class="buzztly-logo">Buzztly</span>
+            <span class="card-number">01</span>
+          </div>
+          <div class="card-image">
+            <img src="images/strategy.jpeg" alt="ヒアリングのイメージ" />
+          </div>
+          <h3 class="card-subtitle">ヒアリングと戦略設計</h3>
+          <p class="card-detail">
+            売り上げ達成、顧客獲得など、企業様によって様々です。<br />
+            ヒアリングをしっかりした上で作成から運用全て行います。
+          </p>
+        </div>
+
+        <div class="strength-card">
+          <div class="card-header">
+            <span class="buzztly-logo">Buzztly</span>
+            <span class="card-number">02</span>
+          </div>
+          <div class="card-image">
+            <img src="images/strong.point.jpeg" alt="データ分析のイメージ" />
+          </div>
+          <h3 class="card-subtitle">
+            AIとデータに基づく<br />再現性の高い成功メソッド
+          </h3>
+          <p class="card-detail">
+            延月間〇〇万件のデータ分析実績を持つ弊社独自のAIツールを活用し、ターゲットに響くコンテンツを狙って制作します。
+          </p>
+        </div>
+
+        <div class="strength-card">
+          <div class="card-header">
+            <span class="buzztly-logo">Buzztly</span>
+            <span class="card-number">03</span>
+          </div>
+          <div class="card-image">
+            <img src="images/return.jpeg" alt="契約のイメージ" />
+          </div>
+          <h3 class="card-subtitle">言い訳はしません。</h3>
+          <p class="card-detail">
+            成果にコミットする、唯一無二の「全額返金を保証」<br />
+            「規定条件あり」
+          </p>
+        </div>
       </div>
-
-      <!---テキストサイズ変更-->
-      <p>SNSの運用を安価で <br />丸ごと任せられたらな...</p>
-      <!---テキストサイズ変更-->
-      <p class="text">そのお悩み⭕️<img src="" alt="" />にお任せください！</p>
-    </section>
-
-    <!---カードセクション--->
-
-    <section class="card-section">
-      <h3>当社の強み</h3>
-
-      <div class="card-title"></div>
-      <div class="description">
-        <img
-          src="images/section_logo02.png"
-          width="50px"
-          height="auto"
-          alt=""
-        />
-        <p>01</p>
-        <img
-          src="images/strategy.jpeg"
-          width="400px"
-          alt="auto"
-          class="card-img"
-        />
-        <h4>ヒアリングと戦略設計</h4>
-        <p>
-          売り上げ達成、顧客獲得など、 企業様によって様々です。
-          ヒヤリングをしっかりした上で 作成から運用全て行います
-        </p>
-      </div>
-      <div class="description">
-        <img
-          src="images/section_logo02.png"
-          width="50px"
-          height="auto"
-          alt=""
-        />
-        <p>02</p>
-        <img
-          src="images/strong.point.jpeg"
-          width="400px"
-          alt="auto"
-          class="card-img"
-        />
-        <h4>AIとデータに基づく 再現性の高い成功メソッド</h4>
-        <p>
-          近月間〇〇万件のデータ分析実績を 持つ弊社独自のAIツールを活用し、
-          ターゲットに響くコンテンツを 狙って制作します。
-        </p>
-      </div>
-      <div class="description">
-        <img
-          src="images/section_logo02.png"
-          width="50px"
-          height="auto"
-          alt=""
-        />
-        <p>03</p>
-        <img
-          src="images/return.jpeg"
-          width="400px"
-          alt="auto"
-          class="card-img"
-        />
-        <h4>結果が出なければ、 即刻全額返金</h4>
-        <p>
-          言い訳はしません。 成果にコミットする、唯一無二の「全額返金保証」
-          『規定条件あり』
-        </p>
-      </div>
-    </section>
+    </div>
 
     <!---お客さまの声ゾーン-->
 
@@ -298,7 +329,7 @@
       <div class="content-wrapper">
         <div class="main-content">
           <div class="text-area">
-            <p class="service-title">SNS運用の月額定額サービス</p>
+            <!-- <p class="service-title">SNS運用の月額定額サービス</p> -->
             <p class="sub-title">いつでも解約可能な月額定額サービス</p>
             <p class="description">
               株式会社Buzztlyが提供するのは、成果にコミットする月額定額サービスです。<br />
@@ -320,17 +351,17 @@
       </div>
     </div>
 
-    <!---運用流れ-->
-
-    <div class="container-setting">
+    <!---運用流れ全体の箱-->
+    <section class="container-setting">
       <h2 class="section-title">SNS運用スタートの流れ</h2>
 
-      <!---運用流れ1つ目-->
+      <!---運用流れ1つ目の箱-->
       <div class="flow-container">
         <div class="flow-item">
           <div class="item-circle">
-            <img src="images/hearring.jpg"ヒアリングのイメージ" />
+            <img src="images/hearring.jpg" alt="#" />
           </div>
+          <!---運用流れ1つ目テキストの箱-->
           <div class="item-text">
             <p class="step-number">01.</p>
             <p class="step-title">徹底ヒアリングと戦略設計</p>
@@ -343,8 +374,9 @@
         <!---運用流れ2つ目-->
         <div class="flow-item">
           <div class="item-circle">
-            <img src="images/estimate.jpg"PC操作のイメージ" />
+            <img src="images/estimate.jpg" alt="#" />
           </div>
+          <!---運用流れ2つ目テキストの箱-->
           <div class="item-text">
             <p class="step-number">02.</p>
             <p class="step-title">ご提案・お見積もり</p>
@@ -357,8 +389,9 @@
         <!---運用流れ3つ目-->
         <div class="flow-item">
           <div class="item-circle">
-            <img src="images/contract.jpg" alt="握手のイメージ" />
+            <img src="images/contract.jpg" alt="#" />
           </div>
+          <!---運用流れ3つ目テキストの箱-->
           <div class="item-text">
             <p class="step-number">03.</p>
             <p class="step-title">ご契約</p>
@@ -373,6 +406,7 @@
           <div class="item-circle">
             <img src="images/setting.jpg" alt="歯車と手のイメージ" />
           </div>
+          <!---運用流れ4つ目テキストの箱-->
           <div class="item-text">
             <p class="step-number">04.</p>
             <p class="step-title">運用準備</p>
@@ -387,6 +421,7 @@
           <div class="item-circle">
             <img src="images/start.jpg" alt="スマホ操作のイメージ" />
           </div>
+          <!---運用流れ5つ目テキストの箱-->
           <div class="item-text">
             <p class="step-number">05.</p>
             <p class="step-title">運用開始</p>
@@ -396,17 +431,19 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!---なぜSNSの必要性なのか-->
-    <div class="container-need">
+    <section class="container-need">
       <h2 class="section-title">なぜ今の時代SNS運用が必要なのか？</h2>
 
       <!---SNSの必要性1つ目-->
-      <section class="reason-card">
+      <div class="reason-card">
         <div class="card-item image-item">
           <img src="images/meeting.jpeg" alt="ミーティングの様子" />
         </div>
+
+        <!---1つ目テキストの箱-->
         <div class="card-item text-item">
           <div class="text-content">
             <h3 class="card-title">
@@ -419,13 +456,15 @@
             </p>
           </div>
         </div>
-      </section>
+      </div>
 
       <!---SNSの必要性2つ目-->
-      <section class="reason-card reverse">
+      <div class="reason-card reverse">
         <div class="card-item image-item">
           <img src="images/expansion.jpeg" alt="スマホ操作の様子" />
         </div>
+
+        <!---2つ目テキストの箱-->
         <div class="card-item text-item">
           <div class="text-content">
             <h3 class="card-title">圧倒的な拡散力で認知度・集客を一気に拡大</h3>
@@ -435,13 +474,15 @@
             </p>
           </div>
         </div>
-      </section>
+      </div>
 
       <!---SNSの必要性3つ目-->
-      <section class="reason-card">
+      <div class="reason-card">
         <div class="card-item image-item">
           <img src="images/trust.jpeg" alt="握手の様子" />
         </div>
+
+        <!---3つ目テキストの箱-->
         <div class="card-item text-item">
           <div class="text-content">
             <h3 class="card-title">企業の信頼性を高め、機会損失リスクを回避</h3>
@@ -451,8 +492,8 @@
             </p>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <!---料金表-->
     <div class="container-plan">
@@ -504,7 +545,7 @@
     <!--相談ゾーン-->
     <div class="container-consultation">
       <h2 class="section-title-cta">お気軽にご相談ください！</h2>
-
+      <!---テキストの箱-->
       <div class="contact-card">
         <div class="card-content">
           <p class="main-message">話を聞くだけでもOK!</p>
@@ -515,7 +556,7 @@
           </p>
           <p class="limit-message">無料相談は先着20名様まで</p>
         </div>
-
+        <!---ボタンゾーン-->
         <div class="button-area-cta">
           <a href="#" class="consult-button">
             <i class="fas fa-envelope"></i> 今すぐ無料相談する！
@@ -554,6 +595,7 @@
             <label for="privacy">個人情報の取り扱いに同意する</label>
           </div>
 
+          <!--送信ボタン-->
           <div class="button-area-submit">
             <button type="submit" class="submit-button">送信する</button>
           </div>
@@ -562,7 +604,7 @@
     </div>
 
     <!---footerゾーン---->
-    <footer id="footer">
+    <footer id="footer-section">
       <section class="primary">
         <p class="logo">
           <img src="images/header_logo.png" width="75px" height="75px" alt="" />
